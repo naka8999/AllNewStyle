@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body class="bg-[#F5EDE1] text-[#5A3E36]">
+
+    <!-- Header -->
+    <header class="bg-cover bg-center bg-no-repeat text-white shadow-md" style="background-image: url('https://images.unsplash.com/photo-1569154107747-fb00e3b3430d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWVzdGhldGljJTIwd2F0ZXJ8ZW58MHx8MHx8fDA%3D');">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <h1 class="text-2xl font-bold">AllNewStyle</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-[#8B5E3C]">Home</a>
+                <a href="#" class="hover:text-[#8B5E3C]">Shop</a>
+                <a href="#" class="hover:text-[#8B5E3C]">About</a>
+                <a href="#" class="hover:text-[#8B5E3C]">Contact</a>
+            </nav>
+            <button class="md:hidden" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#E6D5C3]">
+            <a href="#" class="block px-5 py-2 hover:bg-[#D3B9A3]">Home</a>
+            <a href="#" class="block px-5 py-2 hover:bg-[#D3B9A3]">Shop</a>
+            <a href="#" class="block px-5 py-2 hover:bg-[#D3B9A3]">About</a>
+            <a href="#" class="block px-5 py-2 hover:bg-[#D3B9A3]">Contact</a>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="bg-[#E6D5C3] text-[#5A3E36] text-center py-20">
+    <h2 class="text-4xl font-bold mb-4">New Collection Out Now</h2>
+    <p class="text-lg mb-6">Timeless elegance, premium quality, exclusive designs.</p>
+    <a href="#shop" class="bg-[#8B5E3C] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#6A4028]">Shop Now</a>
+</section>
+    <!-- Product Catalog -->
+    <section id="shop" class="container mx-auto my-16 px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">Featured Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                <img src="https://www.jcrew.com/s7-img-facade/BZ613_WZ5305_m?hei=850&crop=0,0,680,0" alt="Classic Jacket" class="rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">Classic Jacket</h3>
+                <p class="text-[#8B5E3C] mb-2">$120.00</p>
+                <a href="#order" class="bg-[#8B5E3C] text-white py-2 px-4 rounded-lg hover:bg-[#6A4028]">Buy Now</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                <img src="https://www.fashionbeans.com/wp-content/uploads/2021/09/Designer-Sneakers.jpg" alt="Designer Sneakers" class="rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">Designer Sneakers</h3>
+                <p class="text-[#8B5E3C] mb-2">$150.00</p>
+                <a href="#order" class="bg-[#8B5E3C] text-white py-2 px-4 rounded-lg hover:bg-[#6A4028]">Buy Now</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/miu-miu-f23-014-6560786e95cf5.jpg?crop=1xw:0.6666666666666666xh;center,top&resize=1120:*" alt="Stylish Hoodie" class="rounded-lg mb-4">
+                <h3 class="text-xl font-bold mb-2">Stylish Hoodie</h3>
+                <p class="text-[#8B5E3C] mb-2">$90.00</p>
+                <a href="#order" class="bg-[#8B5E3C] text-white py-2 px-4 rounded-lg hover:bg-[#6A4028]">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Order Form -->
+<section id="order" class="bg-[#E6D5C3] py-16">
+    <h2 class="text-3xl font-bold text-center mb-10">Place Your Order</h2>
+    <form class="w-full sm:w-1/2 mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+            <label class="block font-bold mb-1">Full Name</label>
+            <input type="text" class="w-full border rounded px-4 py-2" placeholder="Your Name">
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-1">Email</label>
+            <input type="email" class="w-full border rounded px-4 py-2" placeholder="Your Email">
+        </div>
+        <div class="mb-4">
+            <label class="block font-bold mb-1">Product</label>
+            <select class="w-full border rounded px-4 py-2">
+                <option>Classic Jacket - $120</option>
+                <option>Designer Sneakers - $150</option>
+                <option>Stylish Hoodie - $90</option>
+            </select>
+        </div>
+        <button class="w-full bg-[#8B5E3C] text-white py-3 rounded-lg hover:bg-[#6A4028]">Submit Order</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#5A3E36] text-gray-300 text-center py-6">
+    <p>&copy; 2025 AllNewStyle. All rights reserved.</p>
+    <div class="mt-4 flex justify-center space-x-4">
+        <a href="#" class="hover:text-white">Facebook</a>
+        <a href="#" class="hover:text-white">Instagram</a>
+        <a href="#" class="hover:text-white">Twitter</a>
+    </div>
+</footer>
+
+</body>
+</html>
